@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
     console.error("Error: " + this.join(", "));
   };
   Array.prototype.saveToLoSto = function () {
-    localStorage.setItem("array", JSON.stringify(this));
+    localStorage.setItem("SaveThis", JSON.stringify(this));
   };
 
 
@@ -27,7 +27,7 @@ window.addEventListener("load", () => {
     myArray.saveToLoSto();
   
     const moreStuff = document.createElement("div");
-    moreStuff.innerHTML = localStorage.getItem("array");
+    moreStuff.innerHTML = localStorage.getItem("SaveThis");
     showStuffElement.appendChild(moreStuff);
 
   }
